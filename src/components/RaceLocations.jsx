@@ -1,28 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Locations from "./Locations";
 import ScoreTabs from "./ScoreTabs";
 
 function RaceLocations({ data }) {
   const [location, setLocation] = useState("0");
+
+  // useEffect(() => {}, []);
+
   function chooseLocation(e) {
-    var attribute = e.target.attributes.getNamedItem("locationid").value;
+    console.log(e.target.attributes.getNamedItem("locationid"));
+    let attribute = e.target.attributes.getNamedItem("locationid").value;
     if (attribute !== location) {
       setLocation(attribute);
       console.log(attribute);
     }
   }
   return (
-    <div>
-      <ul>
-        <li locationid={"30"} onClick={chooseLocation}>
-          location
-        </li>
-        <li locationid={"33"} onClick={chooseLocation}>
-          location
-        </li>
-        <li locationid={"0"} onClick={chooseLocation}>
-          location
-        </li>
-      </ul>
+    <div className="container">
+      <Locations chooseLocation={chooseLocation} />
       {location !== "0" ? (
         <ScoreTabs data={data} locationData={location} />
       ) : (

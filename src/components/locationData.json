@@ -1,0 +1,258 @@
+[
+    {
+        "locationName": "KND Training Area",
+        "locationAreaName": "Sector V",
+        "time": "Future",
+        "minLevel": "2",
+        "maxLevel": "4",
+        "EP_ID": "1"
+    },
+    {
+        "locationName": "Pokey Oaks Junior High",
+        "locationAreaName": "Pokey Oaks North",
+        "time": "Future",
+        "minLevel": "2",
+        "maxLevel": "4",
+        "EP_ID": "2"
+    },
+    {
+        "locationName": "Mandark's House",
+        "locationAreaName": "Genius Grove",
+        "time": "Future",
+        "minLevel": "2",
+        "maxLevel": "4",
+        "EP_ID": "3"
+    },
+    {
+        "locationName": "Delightful Developments",
+        "locationAreaName": "Peach Creek Estates",
+        "time": "Future",
+        "minLevel": "2",
+        "maxLevel": "4",
+        "EP_ID": "4"
+    },
+    {
+        "locationName": "Mega's Last Stand",
+        "locationAreaName": "Goat's Junk Yard",
+        "time": "Future",
+        "minLevel": "2",
+        "maxLevel": "4",
+        "EP_ID": "5"
+    },
+    {
+        "locationName": "Pokey Oaks Junior High",
+        "locationAreaName": "Pokey Oaks North",
+        "time": "Suburbs",
+        "minLevel": "5",
+        "maxLevel": "7",
+        "EP_ID": "7"
+    },
+    {
+        "locationName": "Mandark's House",
+        "locationAreaName": "Genius Grove",
+        "time": "Suburbs",
+        "minLevel": "5",
+        "maxLevel": "7",
+        "EP_ID": "8"
+    },
+    {
+        "locationName": "Sweet Revenge",
+        "locationAreaName": "Candy Cove",
+        "time": "Suburbs",
+        "minLevel": "5",
+        "maxLevel": "7",
+        "EP_ID": "9"
+    },
+    {
+        "locationName": "Delightful Development",
+        "locationAreaName": "Peach Creek Estates",
+        "time": "Suburbs",
+        "minLevel": "8",
+        "maxLevel": "10",
+        "EP_ID": "10"
+    },
+    {
+        "locationName": "Mega's Last Stand",
+        "locationAreaName": "Goat's Junk Yard",
+        "time": "Suburbs",
+        "minLevel": "8",
+        "maxLevel": "10",
+        "EP_ID": "11"
+    },
+    {
+        "locationName": "The Boneyard",
+        "locationAreaName": "Eternal Meadows",
+        "time": "Suburbs",
+        "minLevel": "8",
+        "maxLevel": "10",
+        "EP_ID": "12"
+    },
+    {
+        "locationName": "Reactor Works",
+        "locationAreaName": "Nuclear Plant",
+        "time": "Suburbs",
+        "minLevel": "11",
+        "maxLevel": "13",
+        "EP_ID": "13"
+    },
+    {
+        "locationName": "Charles Darwin Middle School",
+        "locationAreaName": "Habitat Homes",
+        "time": "Suburbs",
+        "minLevel": "11",
+        "maxLevel": "13",
+        "EP_ID": "14"
+    },
+    {
+        "locationName": "Dizzy World",
+        "locationAreaName": "City Point",
+        "time": "Downtown",
+        "minLevel": "11",
+        "maxLevel": "13",
+        "EP_ID": "15"
+    },
+    {
+        "locationName": "Sunny Bridges Auditorium",
+        "locationAreaName": "Marquee Row",
+        "time": "Downtown",
+        "minLevel": "14",
+        "maxLevel": "16",
+        "EP_ID": "16"
+    },
+    {
+        "locationName": "Jungle Training Area",
+        "locationAreaName": "Mt. Blackhead",
+        "time": "Wilds",
+        "minLevel": "14",
+        "maxLevel": "16",
+        "EP_ID": "17"
+    },
+    {
+        "locationName": "Loch Mess",
+        "locationAreaName": "Leakey Lake",
+        "time": "Wilds",
+        "minLevel": "14",
+        "maxLevel": "16",
+        "EP_ID": "18"
+    },
+    {
+        "locationName": "The Fissure",
+        "locationAreaName": "Townsville Park",
+        "time": "Downtown",
+        "minLevel": "14",
+        "maxLevel": "16",
+        "EP_ID": "19"
+    },
+    {
+        "locationName": "Cuts and Bruises Skate Park",
+        "locationAreaName": "Orchid Bay",
+        "time": "Downtown",
+        "minLevel": "17",
+        "maxLevel": "19",
+        "EP_ID": "20"
+    },
+    {
+        "locationName": "Sand Castle",
+        "locationAreaName": "Bravo Beach",
+        "time": "Downtown",
+        "minLevel": "17",
+        "maxLevel": "19",
+        "EP_ID": "21"
+    },
+    {
+        "locationName": "Crystalline Caverns",
+        "locationAreaName": "Pimpleback Mountains",
+        "time": "Wild",
+        "minLevel": "17",
+        "maxLevel": "19",
+        "EP_ID": "22"
+    },
+    {
+        "locationName": "Construction Site",
+        "locationAreaName": "Morbucks Towers",
+        "time": "Downtown",
+        "minLevel": "17",
+        "maxLevel": "19",
+        "EP_ID": "23"
+    },
+    {
+        "locationName": "Hani-Baba Temple",
+        "locationAreaName": "The Ruins",
+        "time": "Wilds",
+        "minLevel": "20",
+        "maxLevel": "22",
+        "EP_ID": "24"
+    },
+    {
+        "locationName": "Tyrannical Gardens",
+        "locationAreaName": "Galaxy Gardens",
+        "time": "Downtown",
+        "minLevel": "20",
+        "maxLevel": "22",
+        "EP_ID": "25"
+    },
+    {
+        "locationName": "Skypad Space Port",
+        "locationAreaName": "Offworld Plaza",
+        "time": "Downtown",
+        "minLevel": "23",
+        "maxLevel": "25",
+        "EP_ID": "26"
+    },
+    {
+        "locationName": "Nowhere Triangle",
+        "locationAreaName": "Area 51.5",
+        "time": "Wilds",
+        "minLevel": "23",
+        "maxLevel": "25",
+        "EP_ID": "27"
+    },
+    {
+        "locationName": "The Canopy",
+        "locationAreaName": "Really Twisted Forest",
+        "time": "Wilds",
+        "minLevel": "26",
+        "maxLevel": "28",
+        "EP_ID": "28"
+    },
+    {
+        "locationName": "Monkey Summit",
+        "locationAreaName": "Monkey Mountains",
+        "time": "Wilds",
+        "minLevel": "26",
+        "maxLevel": "28",
+        "EP_ID": "29"
+    },
+    {
+        "locationName": "Dinosaur Graveyard",
+        "locationAreaName": "Dinosaur Pass",
+        "time": "Darklands",
+        "minLevel": "26",
+        "maxLevel": "28",
+        "EP_ID": "30"
+    },
+    {
+        "locationName": "Inferno Fields",
+        "locationAreaName": "Firepits",
+        "time": "Darklands",
+        "minLevel": "29",
+        "maxLevel": "31",
+        "EP_ID": "31"
+    },
+    {
+        "locationName": "Dark Tree Clearing",
+        "locationAreaName": "Dark Glade",
+        "time": "Darklands",
+        "minLevel": "32",
+        "maxLevel": "34",
+        "EP_ID": "32"
+    },
+    {
+        "locationName": "Green Gullet",
+        "locationAreaName": "Green Maw",
+        "time": "Darklands",
+        "minLevel": "35",
+        "maxLevel": "36",
+        "EP_ID": "33"
+    }
+]

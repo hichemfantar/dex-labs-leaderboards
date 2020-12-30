@@ -82,14 +82,19 @@ function ScoreTabs({ locationData }) {
       // console.log(arrayOfUsers);
 
       return (
-        <li
+        <tr
           key={
             userObject.PCUID ? userObject.PCUID : Math.random() * Math.random()
           }
         >
-          PCUID:
-          {userObject.PCUID ? userObject.PCUID : "no pcuid"}
-        </li>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>
+            PCUID:
+            {userObject.PCUID ? userObject.PCUID : "no pcuid"}
+          </td>
+        </tr>
       );
     });
 
@@ -102,19 +107,8 @@ function ScoreTabs({ locationData }) {
             <th>Race / Locations</th>
             <th>Top Score</th>
           </tr>
-          <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
+          {final}
         </table>
-        <ul>{final}</ul>
       </TabPanel>
     );
   });
@@ -126,7 +120,7 @@ function ScoreTabs({ locationData }) {
   }, [locationData]);
 
   return (
-    <Tabs>
+    <Tabs className="results-table">
       <TabList>{listTabs}</TabList>
       {listTabPanel}
     </Tabs>

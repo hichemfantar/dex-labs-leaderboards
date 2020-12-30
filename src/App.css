@@ -75,6 +75,37 @@ th,
 td {
   text-align: center;
 }
+.location-list-ul {
+  display: flex;
+  flex-direction: column;
+  /* width: 10vw; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.location-list-div {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.location-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 25vw; */
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+/* .results-table {
+} */
 /* .App {
   text-align: center;
 }
