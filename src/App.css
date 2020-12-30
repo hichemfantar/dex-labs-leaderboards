@@ -1,5 +1,7 @@
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
 }
 
 .react-tabs__tab-list {
@@ -23,7 +25,7 @@
   background: #fff;
   border-color: #aaa;
   color: black;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0px 15px 0 0;
 }
 
 .react-tabs__tab--disabled {
@@ -54,7 +56,25 @@
 .react-tabs__tab-panel--selected {
   display: block;
 }
+.header {
+  display: flex;
+  align-self: center;
+  color: black;
+}
+.root-div {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: black;
+}
 
+.table {
+  width: 100%;
+}
+th,
+td {
+  text-align: center;
+}
 /* .App {
   text-align: center;
 }
