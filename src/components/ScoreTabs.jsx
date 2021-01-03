@@ -87,9 +87,9 @@ function ScoreTabs({ locationData }) {
             userObject.PCUID ? userObject.PCUID : Math.random() * Math.random()
           }
         >
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
+          <td>{userObject.LastName + userObject.FirstName}</td>
+          <td>{userObject.Score}</td>
+          <td>{locationData}</td>
           <td>
             PCUID:
             {userObject.PCUID ? userObject.PCUID : "no pcuid"}

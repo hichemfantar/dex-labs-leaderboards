@@ -1,3 +1,6 @@
+:root {
+  box-sizing: border-box;
+}
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
   display: flex;
@@ -60,6 +63,7 @@
   display: flex;
   align-self: center;
   color: black;
+  height: 10vh;
 }
 .root-div {
   display: flex;
@@ -75,37 +79,45 @@ th,
 td {
   text-align: center;
 }
+
 .location-list-ul {
-  display: flex;
-  flex-direction: column;
-  /* width: 10vw; */
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+
+  list-style-type: none;
 }
+
 .location-list-div {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  flex-wrap: wrap;
-  justify-content: center;
+  list-style-type: none;
+  overflow-y: scroll;
+  width: 30vw;
+  max-height: 90vh;
 }
 .location-list-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 25vw; */
-  flex-wrap: wrap;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
-
+.location-item-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h4 {
+  padding: 0px;
+  margin: 0px;
+}
 .container {
   display: flex;
   flex-direction: row;
   width: 100vw;
 }
 
-/* .results-table {
-} */
+.results-table {
+  width: 70vw;
+}
 /* .App {
   text-align: center;
 }
