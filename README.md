@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Dex Labs Leaderboards
+
+This project was developed to show the leaderboards of races in OpenFusion which is an open source revival project of the beloved CN FusionFall [OpenFusion](https://github.com/OpenFusionProject/OpenFusion).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
