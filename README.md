@@ -1,6 +1,8 @@
 # Getting Started with Dex Labs Leaderboards
 
-This project was developed to show the leaderboards of races in OpenFusion which is an open source revival project of the beloved CN FusionFall [OpenFusion](https://github.com/OpenFusionProject/OpenFusion).
+This [project](http://dex-labs-leaderboard.herokuapp.com) was developed to show the leaderboards of races in OpenFusion which is an open source revival project of the beloved CN FusionFall [OpenFusion](https://github.com/OpenFusionProject/OpenFusion).
+
+The express server can be ignored, It's just for hosting the production build on heroku.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
