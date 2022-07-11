@@ -1,5 +1,5 @@
 import appConstants from "appConstants";
-import appLogo from "assets/images/logos/logo48.png";
+import appLogo from "assets/images/logos/logo48round.png";
 import { FaGithub } from "react-icons/fa";
 import GlobalLoader from "./GlobalLoader/GlobalLoader";
 
