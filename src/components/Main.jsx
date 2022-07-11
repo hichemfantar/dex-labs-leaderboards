@@ -33,13 +33,13 @@ export default function Main(props) {
 							setActiveDimension(e.target.value);
 						}}
 					>
-						{servers.map((dimension) => (
+						{servers.map((server) => (
 							<option
-								key={dimension?.id}
-								selected={ActiveDimension?.id === dimension?.id}
-								value={dimension?.link}
+								key={server?.id}
+								selected={ActiveDimension?.id === server?.id}
+								value={server?.link}
 							>
-								{dimension?.name}
+								{server?.name}
 							</option>
 						))}
 					</select>
@@ -60,7 +60,7 @@ export default function Main(props) {
 					>
 						{infectedZones.map((infectedZone) => (
 							<option
-								key={activeInfectedZone?.EP_ID}
+								key={infectedZone?.EP_ID}
 								selected={activeInfectedZone?.EP_ID === infectedZone?.EP_ID}
 								value={infectedZone?.EP_ID}
 							>
@@ -147,6 +147,7 @@ export default function Main(props) {
 											<img
 												className="c-avatar c-media__img"
 												src={`https://avatars.dicebear.com/api/adventurer/${row?.PCUID}.svg`}
+												alt="user avatar"
 											/>
 											<div className="c-media__content">
 												<div className="c-media__title">
