@@ -11,7 +11,7 @@ export default function Header() {
       draggable="false"
     /> */}
 			<button className="c-button c-button--primary">
-				Dex Labs Leaderboards
+				DexLabs Leaderboards
 			</button>
 			<h3
 				style={{
