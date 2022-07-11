@@ -1,3 +1,4 @@
+import dimensions from "./dimensionsData.js";
 import infectedZones from "./InfectedZonesData.js";
 import useLeaderboard from "./useLeaderboard";
 
@@ -8,12 +9,41 @@ const randomEmoji = () => {
 };
 
 export default function Main(props) {
-	const { activeInfectedZone, setActiveInfectedZone, ...rest } = props;
-	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID);
+	const {
+		activeInfectedZone,
+		setActiveInfectedZone,
+		ActiveDimension,
+		setActiveDimension,
+		...rest
+	} = props;
+
+	const serverQuery = useLeaderboard(
+		activeInfectedZone?.EP_ID,
+		ActiveDimension
+	);
 
 	return (
 		<div className="l-grid__item">
 			<div className="c-card">
+				<div className="c-card__header">
+					<h3>Dimensions</h3>
+					<select
+						className="c-select"
+						onChange={(e) => {
+							setActiveDimension(e.target.value);
+						}}
+					>
+						{dimensions.map((dimension) => (
+							<option
+								key={dimension?.id}
+								selected={ActiveDimension?.id === dimension?.id}
+								value={dimension?.link}
+							>
+								{dimension?.name}
+							</option>
+						))}
+					</select>
+				</div>
 				<div className="c-card__header">
 					<h3>Infected Zones</h3>
 					<select
@@ -30,6 +60,7 @@ export default function Main(props) {
 					>
 						{infectedZones.map((infectedZone) => (
 							<option
+								key={activeInfectedZone?.EP_ID}
 								selected={activeInfectedZone?.EP_ID === infectedZone?.EP_ID}
 								value={infectedZone?.EP_ID}
 							>

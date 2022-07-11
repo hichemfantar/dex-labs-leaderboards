@@ -1,11 +1,24 @@
+import { useEffect, useState } from "react";
 import useLeaderboard from "./useLeaderboard";
 
 export default function SideBar(props) {
-	const { activeInfectedZone, ...rest } = props;
-	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID);
-	const fullName =
-		serverQuery.data?.alltime?.score[0]?.FirstName +
-			serverQuery.data?.alltime?.score[0]?.LastName || "👻";
+	const { activeInfectedZone, ActiveDimension, ...rest } = props;
+	const serverQuery = useLeaderboard(
+		activeInfectedZone?.EP_ID,
+		ActiveDimension
+	);
+	const [fullName, setFullName] = useState("");
+
+	useEffect(() => {
+		if (
+			serverQuery.data?.alltime?.score[0]?.FirstName &&
+			serverQuery.data?.alltime?.score[0]?.LastName
+		) {
+			setFullName(
+				`${serverQuery.data?.alltime?.score[0]?.FirstName} ${serverQuery.data?.alltime?.score[0]?.LastName}`
+			);
+		} else setFullName("👻");
+	}, [serverQuery.data?.alltime?.score]);
 
 	return (
 		<div className="l-grid__item l-grid__item--sticky">
