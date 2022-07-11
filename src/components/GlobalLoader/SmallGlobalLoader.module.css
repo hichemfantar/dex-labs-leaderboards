@@ -1,0 +1,23 @@
+.fetchingLoader {
+	animation: rotateFetchingLoader 1s infinite linear;
+	/* animation-timing-function: linear; */
+	font-size: 2.5rem;
+	transition: 0.3s ease;
+	pointer-events: none;
+}
+.fetchingLoader.paused {
+	animation-play-state: paused;
+	opacity: 0;
+}
+
+@keyframes rotateFetchingLoader {
+	0% {
+		transform: rotate(0deg);
+	}
+	/* 50% {
+		transform: rotate(180deg);
+	} */
+	100% {
+		transform: rotate(360deg);
+	}
+}

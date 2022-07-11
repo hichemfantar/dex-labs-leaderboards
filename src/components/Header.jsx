@@ -1,9 +1,8 @@
-import { useIsFetching } from "react-query";
 import appLogo from "assets/images/logos/logo48.png";
+import { FaGithub } from "react-icons/fa";
+import GlobalLoader from "./GlobalLoader/GlobalLoader";
 
 export default function Header() {
-	const isFetching = useIsFetching();
-
 	return (
 		<div className="c-header">
 			<button className="c-button c-button--primary">
@@ -17,13 +16,13 @@ export default function Header() {
 					alignItems: "center",
 				}}
 			>
-				<h3
-					style={{
-						opacity: isFetching ? 1 : 0,
-					}}
+				<GlobalLoader />
+				<a
+					href="https://github.com/hichemfantar/dex-labs-leaderboards"
+					target={"_blank"}
 				>
-					fetching
-				</h3>
+					<FaGithub size="2em" color="ddd9ff" />
+				</a>
 				<img
 					className="c-logo"
 					src={appLogo}
