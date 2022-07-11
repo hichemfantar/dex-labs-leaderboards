@@ -1,3 +1,4 @@
+import appConstants from "appConstants";
 import appLogo from "assets/images/logos/logo48.png";
 import { FaGithub } from "react-icons/fa";
 import GlobalLoader from "./GlobalLoader/GlobalLoader";
@@ -6,7 +7,7 @@ export default function Header() {
 	return (
 		<div className="c-header">
 			<button className="c-button c-button--primary">
-				DexLabs Leaderboards
+				{appConstants.appName}
 			</button>
 			<div
 				style={{
