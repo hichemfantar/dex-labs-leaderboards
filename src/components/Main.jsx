@@ -121,9 +121,9 @@ export default function Main(props) {
 												<div className="c-media__title">
 													{row?.FirstName} {row?.LastName}
 												</div>
-												<a className="c-media__link u-text--small" href="#">
+												{/* <a className="c-media__link u-text--small" href="#">
 													{row?.PCUID}
-												</a>
+												</a> */}
 											</div>
 										</div>
 										<div

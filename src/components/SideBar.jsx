@@ -49,9 +49,9 @@ export default function SideBar(props) {
 							Level: {activeInfectedZone?.minLevel} -{" "}
 							{activeInfectedZone?.maxLevel}
 						</h4>
-						<h4 className="u-text--teal u-text--small">
+						{/* <h4 className="u-text--teal u-text--small">
 							API ID: {activeInfectedZone?.EP_ID}
-						</h4>
+						</h4> */}
 					</div>
 				</div>
 			</div>
