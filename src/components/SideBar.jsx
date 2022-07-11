@@ -43,11 +43,24 @@ export default function SideBar(props) {
 						<div className="u-text-small u-text--medium u-mb--16">
 							Active Location
 						</div>
-						<img className="c-location-image" src={activeLocation?.image} />
+						<img
+							className="c-location-image"
+							src={activeLocation?.image}
+							alt="active location"
+						/>
 						<h3 className="u-mt--16">{activeLocation?.name}</h3>
 						<span className="u-text--teal u-text--small">
 							{activeLocation?.areaName}
 						</span>
+						<h4 className="u-text--teal u-text--small">
+							{activeLocation?.time}
+						</h4>
+						<h4 className="u-text--teal u-text--small">
+							Level: {activeLocation?.minLevel} - {activeLocation?.maxLevel}
+						</h4>
+						<h4 className="u-text--teal u-text--small">
+							API ID: {activeLocation?.EP_ID}
+						</h4>
 					</div>
 				</div>
 			</div>

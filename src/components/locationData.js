@@ -34,7 +34,7 @@ import location33 from "assets/images/locations/ep_big_33.png";
 const locations = [
 	{
 		name: "KND Training Area",
-		areaName: "Sector V",
+		areaName: "Sector V (F)",
 		time: "Future",
 		minLevel: "2",
 		maxLevel: "4",
@@ -43,7 +43,7 @@ const locations = [
 	},
 	{
 		name: "Pokey Oaks Junior High",
-		areaName: "Pokey Oaks North",
+		areaName: "Pokey Oaks North (F)",
 		time: "Future",
 		minLevel: "2",
 		maxLevel: "4",
@@ -52,7 +52,7 @@ const locations = [
 	},
 	{
 		name: "Mandark's House",
-		areaName: "Genius Grove",
+		areaName: "Genius Grove (F)",
 		time: "Future",
 		minLevel: "2",
 		maxLevel: "4",
@@ -61,7 +61,7 @@ const locations = [
 	},
 	{
 		name: "Delightful Developments",
-		areaName: "Peach Creek Estates",
+		areaName: "Peach Creek Estates (F)",
 		time: "Future",
 		minLevel: "2",
 		maxLevel: "4",
@@ -70,7 +70,7 @@ const locations = [
 	},
 	{
 		name: "Mega's Last Stand",
-		areaName: "Goat's Junk Yard",
+		areaName: "Goat's Junk Yard (F)",
 		time: "Future",
 		minLevel: "2",
 		maxLevel: "4",
