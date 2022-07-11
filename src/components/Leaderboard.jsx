@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Header from "./Header";
+import locations from "./locationData.js";
 import Main from "./Main";
 import SideBar from "./SideBar";
 
 export default function Leaderboard() {
-	const [activeLocation, setActiveLocation] = useState(33);
+	const [activeLocation, setActiveLocation] = useState(locations[9]);
 
 	return (
 		<div className="l-wrapper">

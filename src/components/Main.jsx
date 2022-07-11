@@ -1,5 +1,4 @@
-import React from "react";
-import locationData from "./locationData.json";
+import locations from "./locationData.js";
 import useLeaderboard from "./useLeaderboard";
 
 const randomEmoji = () => {
@@ -10,7 +9,7 @@ const randomEmoji = () => {
 
 export default function Main(props) {
 	const { activeLocation, setActiveLocation, ...rest } = props;
-	const serverQuery = useLeaderboard(activeLocation);
+	const serverQuery = useLeaderboard(activeLocation?.EP_ID);
 
 	return (
 		<div className="l-grid__item">
@@ -19,10 +18,21 @@ export default function Main(props) {
 					<h3>Locations</h3>
 					<select
 						className="c-select"
-						onChange={(e) => setActiveLocation(e.target.value)}
+						onChange={(e) => {
+							const activeLocation = locations.find((selectedLocation) => {
+								return selectedLocation?.EP_ID === e.target.value;
+							});
+
+							setActiveLocation(activeLocation);
+						}}
 					>
-						{locationData.map((location) => (
-							<option value={location?.EP_ID}>{location?.locationName}</option>
+						{locations.map((location) => (
+							<option
+								selected={activeLocation?.EP_ID === location?.EP_ID}
+								value={location?.EP_ID}
+							>
+								{location?.name}
+							</option>
 						))}
 					</select>
 				</div>

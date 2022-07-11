@@ -1,4 +1,3 @@
-import React from "react";
 import { useIsFetching } from "react-query";
 
 export default function Header() {
