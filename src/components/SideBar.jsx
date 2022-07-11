@@ -3,6 +3,9 @@ import useLeaderboard from "./useLeaderboard";
 export default function SideBar(props) {
 	const { activeLocation, ...rest } = props;
 	const serverQuery = useLeaderboard(activeLocation?.EP_ID);
+	const fullName =
+		serverQuery.data?.alltime?.score[0]?.FirstName +
+			serverQuery.data?.alltime?.score[0]?.LastName || "👻";
 
 	return (
 		<div className="l-grid__item l-grid__item--sticky">
@@ -11,14 +14,15 @@ export default function SideBar(props) {
 					<div className="u-display--flex u-justify--space-between">
 						<div className="u-text--left">
 							<div className="u-text--small">Top Runner</div>
-							<h2>
-								{serverQuery.data?.alltime?.score[0]?.FirstName +
-									serverQuery.data?.alltime?.score[0]?.LastName}
-							</h2>
+							{serverQuery.isLoading && <h2>Checking if It's you...</h2>}
+							{serverQuery.isSuccess && <h2>{fullName}</h2>}
 						</div>
 						<div className="u-text--right">
 							<div className="u-text--small">Score</div>
-							<h2>{serverQuery.data?.alltime?.score[0]?.Score}</h2>
+							<h2>
+								{serverQuery.isSuccess &&
+									(serverQuery.data?.alltime?.score[0]?.Score || "Over 9000!")}
+							</h2>
 						</div>
 					</div>
 				</div>

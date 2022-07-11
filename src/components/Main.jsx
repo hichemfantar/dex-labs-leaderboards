@@ -58,7 +58,44 @@ export default function Main(props) {
 							</div>
 						</li>
 
-						{serverQuery.isLoading && "Loading"}
+						{serverQuery.isLoading && (
+							<div
+								className="link"
+								style={{
+									display: "block",
+									textAlign: "center",
+								}}
+							>
+								<h1>Loading...</h1>
+							</div>
+						)}
+
+						{serverQuery.isError && (
+							<a
+								href="https://youtu.be/eWTtEkRz4fM"
+								target="_blank"
+								style={{
+									display: "block",
+									textAlign: "center",
+								}}
+							>
+								<h1>Something went wrong!</h1>
+							</a>
+						)}
+
+						{serverQuery.isSuccess &&
+							!serverQuery.data?.alltime?.score?.length && (
+								<a
+									href="https://youtu.be/LNNPNweSbp8"
+									target="_blank"
+									style={{
+										display: "block",
+										textAlign: "center",
+									}}
+								>
+									<h1>It's a ghost town!</h1>
+								</a>
+							)}
 
 						{serverQuery.data &&
 							serverQuery.data?.alltime?.score?.map((row, idx) => (

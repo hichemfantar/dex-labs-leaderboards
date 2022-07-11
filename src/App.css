@@ -57,14 +57,16 @@ h6 {
 	font-family: "Oswald", system-ui;
 }
 
-a {
+a,
+.link {
 	color: var(--primary);
 	text-decoration: none;
 	transition: all 120ms ease-out 0s;
 	display: inline-block;
 	border-radius: 0.4rem;
 }
-a:hover {
+a:hover,
+.link:hover {
 	background: var(--primary-trans);
 	color: var(--primary-light);
 	box-shadow: 0px 0px 0px 0.4rem var(--primary-trans);
