@@ -1,4 +1,4 @@
-const dimensions = [
+const servers = [
 	{
 		name: "Original",
 		link: "/getranks",
@@ -11,4 +11,4 @@ const dimensions = [
 	},
 ];
 
-export default dimensions;
+export default servers;

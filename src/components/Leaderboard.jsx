@@ -1,5 +1,5 @@
 import { useState } from "react";
-import dimensions from "./dimensionsData.js";
+import servers from "./serversData.js";
 import Header from "./Header";
 import infectedZones from "./InfectedZonesData.js";
 import Main from "./Main";
@@ -9,7 +9,7 @@ export default function Leaderboard() {
 	const [activeInfectedZone, setActiveInfectedZone] = useState(
 		infectedZones[9]
 	);
-	const [ActiveDimension, setActiveDimension] = useState(dimensions[0]?.link);
+	const [ActiveDimension, setActiveDimension] = useState(servers[0]?.link);
 
 	return (
 		<div className="l-wrapper">

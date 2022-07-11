@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import convert from "xml-js";
-import dimensions from "./dimensionsData";
+import servers from "./serversData.js";
 
 export default function useLeaderboard(infectedZoneID, ActiveDimension) {
 	return useQuery(
@@ -11,7 +11,7 @@ export default function useLeaderboard(infectedZoneID, ActiveDimension) {
 			formdata.append("EP_ID", infectedZoneID);
 			formdata.append("PCUID", 0);
 
-			const res = await axios.post(ActiveDimension || dimensions[0], formdata);
+			const res = await axios.post(ActiveDimension || servers[0], formdata);
 			return res.data;
 		},
 		{

@@ -1,4 +1,4 @@
-import dimensions from "./dimensionsData.js";
+import servers from "./serversData.js";
 import infectedZones from "./InfectedZonesData.js";
 import useLeaderboard from "./useLeaderboard";
 
@@ -26,14 +26,14 @@ export default function Main(props) {
 		<div className="l-grid__item">
 			<div className="c-card">
 				<div className="c-card__header">
-					<h3>Dimensions</h3>
+					<h3>Servers</h3>
 					<select
 						className="c-select"
 						onChange={(e) => {
 							setActiveDimension(e.target.value);
 						}}
 					>
-						{dimensions.map((dimension) => (
+						{servers.map((dimension) => (
 							<option
 								key={dimension?.id}
 								selected={ActiveDimension?.id === dimension?.id}
