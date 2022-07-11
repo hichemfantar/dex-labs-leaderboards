@@ -179,7 +179,7 @@ select {
 	-ms-user-select: none;
 	user-select: none;
 	object-fit: contain;
-	border-radius: 4445px;
+	border-radius: 14px;
 }
 
 .c-list {
