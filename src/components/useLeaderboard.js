@@ -2,12 +2,12 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import convert from "xml-js";
 
-export default function useLeaderboard(activeLocation) {
+export default function useLeaderboard(infectedZone) {
 	return useQuery(
-		["leaderboard", activeLocation],
+		["leaderboard", infectedZone],
 		async () => {
 			let formdata = new FormData();
-			formdata.append("EP_ID", activeLocation);
+			formdata.append("EP_ID", infectedZone);
 			formdata.append("PCUID", 0);
 
 			const res = await axios.post("/academy/getranks", formdata);
@@ -34,11 +34,11 @@ export default function useLeaderboard(activeLocation) {
 							LastName: newArray[4],
 						};
 					});
-					let locations = { ...dataParsed?.root };
-					locations.alltime.score = [...parsed];
+					let infectedZones = { ...dataParsed?.root };
+					infectedZones.alltime.score = [...parsed];
 					// newRoot.alltime.score = [...(parsed || [])];
 
-					return locations;
+					return infectedZones;
 				} catch (error) {
 					return [];
 				}

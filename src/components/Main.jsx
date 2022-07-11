@@ -1,4 +1,4 @@
-import locations from "./locationData.js";
+import infectedZones from "./InfectedZonesData.js";
 import useLeaderboard from "./useLeaderboard";
 
 const randomEmoji = () => {
@@ -8,30 +8,32 @@ const randomEmoji = () => {
 };
 
 export default function Main(props) {
-	const { activeLocation, setActiveLocation, ...rest } = props;
-	const serverQuery = useLeaderboard(activeLocation?.EP_ID);
+	const { activeInfectedZone, setActiveInfectedZone, ...rest } = props;
+	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID);
 
 	return (
 		<div className="l-grid__item">
 			<div className="c-card">
 				<div className="c-card__header">
-					<h3>Locations</h3>
+					<h3>Infected Zones</h3>
 					<select
 						className="c-select"
 						onChange={(e) => {
-							const activeLocation = locations.find((selectedLocation) => {
-								return selectedLocation?.EP_ID === e.target.value;
-							});
+							const activeInfectedZone = infectedZones.find(
+								(selectedInfectedZone) => {
+									return selectedInfectedZone?.EP_ID === e.target.value;
+								}
+							);
 
-							setActiveLocation(activeLocation);
+							setActiveInfectedZone(activeInfectedZone);
 						}}
 					>
-						{locations.map((location) => (
+						{infectedZones.map((infectedZone) => (
 							<option
-								selected={activeLocation?.EP_ID === location?.EP_ID}
-								value={location?.EP_ID}
+								selected={activeInfectedZone?.EP_ID === infectedZone?.EP_ID}
+								value={infectedZone?.EP_ID}
 							>
-								{location?.name}
+								{infectedZone?.name}
 							</option>
 						))}
 					</select>

@@ -1,8 +1,8 @@
 import useLeaderboard from "./useLeaderboard";
 
 export default function SideBar(props) {
-	const { activeLocation, ...rest } = props;
-	const serverQuery = useLeaderboard(activeLocation?.EP_ID);
+	const { activeInfectedZone, ...rest } = props;
+	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID);
 	const fullName =
 		serverQuery.data?.alltime?.score[0]?.FirstName +
 			serverQuery.data?.alltime?.score[0]?.LastName || "👻";
@@ -31,25 +31,26 @@ export default function SideBar(props) {
 				<div className="c-card__body">
 					<div className="u-text--center" id="winner">
 						<div className="u-text-small u-text--medium u-mb--16">
-							Active Location
+							Infected Zone
 						</div>
 						<img
 							className="c-location-image"
-							src={activeLocation?.image}
-							alt="active location"
+							src={activeInfectedZone?.image}
+							alt="active infected zone"
 						/>
-						<h3 className="u-mt--16">{activeLocation?.name}</h3>
+						<h3 className="u-mt--16">{activeInfectedZone?.name}</h3>
 						<span className="u-text--teal u-text--small">
-							{activeLocation?.areaName}
+							{activeInfectedZone?.areaName}
 						</span>
 						<h4 className="u-text--teal u-text--small">
-							{activeLocation?.time}
+							{activeInfectedZone?.time}
 						</h4>
 						<h4 className="u-text--teal u-text--small">
-							Level: {activeLocation?.minLevel} - {activeLocation?.maxLevel}
+							Level: {activeInfectedZone?.minLevel} -{" "}
+							{activeInfectedZone?.maxLevel}
 						</h4>
 						<h4 className="u-text--teal u-text--small">
-							API ID: {activeLocation?.EP_ID}
+							API ID: {activeInfectedZone?.EP_ID}
 						</h4>
 					</div>
 				</div>
