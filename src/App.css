@@ -172,12 +172,14 @@ select {
 
 .c-logo {
 	display: inline-block;
-	width: 100%;
+	/* width: 100%; */
 	max-width: 17.6rem;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	object-fit: contain;
+	border-radius: 4445px;
 }
 
 .c-list {
