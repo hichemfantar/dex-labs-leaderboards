@@ -9,7 +9,7 @@ export default function Leaderboard() {
 	const [activeInfectedZone, setActiveInfectedZone] = useState(
 		infectedZones[9]
 	);
-	const [ActiveDimension, setActiveDimension] = useState(servers[0]?.link);
+	const [ActiveServer, setActiveServer] = useState(servers[0]?.link);
 
 	return (
 		<div className="l-wrapper">
@@ -18,14 +18,14 @@ export default function Leaderboard() {
 				<SideBar
 					activeInfectedZone={activeInfectedZone}
 					setActiveInfectedZone={setActiveInfectedZone}
-					ActiveDimension={ActiveDimension}
-					setActiveDimension={setActiveDimension}
+					ActiveServer={ActiveServer}
+					setActiveServer={setActiveServer}
 				/>
 				<Main
 					activeInfectedZone={activeInfectedZone}
 					setActiveInfectedZone={setActiveInfectedZone}
-					ActiveDimension={ActiveDimension}
-					setActiveDimension={setActiveDimension}
+					ActiveServer={ActiveServer}
+					setActiveServer={setActiveServer}
 				/>
 			</div>
 		</div>

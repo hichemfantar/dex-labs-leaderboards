@@ -3,15 +3,15 @@ import { useQuery } from "react-query";
 import convert from "xml-js";
 import servers from "./serversData.js";
 
-export default function useLeaderboard(infectedZoneID, ActiveDimension) {
+export default function useLeaderboard(infectedZoneID, ActiveServer) {
 	return useQuery(
-		["leaderboard", infectedZoneID, ActiveDimension],
+		["leaderboard", infectedZoneID, ActiveServer],
 		async () => {
 			let formdata = new FormData();
 			formdata.append("EP_ID", infectedZoneID);
 			formdata.append("PCUID", 0);
 
-			const res = await axios.post(ActiveDimension || servers[0], formdata);
+			const res = await axios.post(ActiveServer || servers[0], formdata);
 			return res.data;
 		},
 		{

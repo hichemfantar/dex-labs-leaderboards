@@ -2,11 +2,8 @@ import { useEffect, useState } from "react";
 import useLeaderboard from "./useLeaderboard";
 
 export default function SideBar(props) {
-	const { activeInfectedZone, ActiveDimension, ...rest } = props;
-	const serverQuery = useLeaderboard(
-		activeInfectedZone?.EP_ID,
-		ActiveDimension
-	);
+	const { activeInfectedZone, ActiveServer, ...rest } = props;
+	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID, ActiveServer);
 	const [fullName, setFullName] = useState("");
 
 	useEffect(() => {

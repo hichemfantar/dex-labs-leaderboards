@@ -12,15 +12,12 @@ export default function Main(props) {
 	const {
 		activeInfectedZone,
 		setActiveInfectedZone,
-		ActiveDimension,
-		setActiveDimension,
+		ActiveServer,
+		setActiveServer,
 		...rest
 	} = props;
 
-	const serverQuery = useLeaderboard(
-		activeInfectedZone?.EP_ID,
-		ActiveDimension
-	);
+	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID, ActiveServer);
 
 	return (
 		<div className="l-grid__item">
@@ -30,13 +27,13 @@ export default function Main(props) {
 					<select
 						className="c-select"
 						onChange={(e) => {
-							setActiveDimension(e.target.value);
+							setActiveServer(e.target.value);
 						}}
 					>
 						{servers.map((server) => (
 							<option
 								key={server?.id}
-								selected={ActiveDimension?.id === server?.id}
+								selected={ActiveServer?.id === server?.id}
 								value={server?.link}
 							>
 								{server?.name}
