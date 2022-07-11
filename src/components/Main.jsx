@@ -101,7 +101,7 @@ export default function Main(props) {
 
 						{serverQuery.data &&
 							serverQuery.data?.alltime?.score?.map((row, idx) => (
-								<li className="c-list__item">
+								<li key={row?.PCUID} className="c-list__item">
 									<div className="c-list__grid">
 										<div
 											className={`c-flag c-place u-bg--transparent ${
@@ -113,10 +113,10 @@ export default function Main(props) {
 											{idx + 1}
 										</div>
 										<div className="c-media">
-											{/* <img
-                                      className="c-avatar c-media__img"
-                                      src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col-retina/image.png"
-                                    /> */}
+											<img
+												className="c-avatar c-media__img"
+												src={`https://avatars.dicebear.com/api/adventurer/${row?.PCUID}.svg`}
+											/>
 											<div className="c-media__content">
 												<div className="c-media__title">
 													{row?.FirstName} {row?.LastName}
