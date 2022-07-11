@@ -23,20 +23,6 @@ export default function SideBar(props) {
 					</div>
 				</div>
 			</div>
-			{/* <div className="c-card u-bg--light-gradient u-text--dark">
-      <div className="c-card__body">
-        <div className="u-display--flex u-justify--space-between">
-          <div className="u-text--left">
-            <div className="u-text--small">My Rank</div>
-            <h2>3rd Place</h2>
-          </div>
-          <div className="u-text--right">
-            <div className="u-text--small">My Score</div>
-            <h2>24</h2>
-          </div>
-        </div>
-      </div>
-    </div> */}
 			<div className="c-card">
 				<div className="c-card__body">
 					<div className="u-text--center" id="winner">
