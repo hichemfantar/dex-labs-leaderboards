@@ -2,11 +2,11 @@ import servers from "./serversData.js";
 import infectedZones from "./InfectedZonesData.js";
 import useLeaderboard from "./useLeaderboard";
 
-const randomEmoji = () => {
-	const emojis = ["👏", "👍", "🙌", "🤩", "🔥", "⭐️", "🏆", "💯"];
-	let randomNumber = Math.floor(Math.random() * emojis.length);
-	return emojis[randomNumber];
-};
+// const randomEmoji = () => {
+// 	const emojis = ["👏", "👍", "🙌", "🤩", "🔥", "⭐️", "🏆", "💯"];
+// 	let randomNumber = Math.floor(Math.random() * emojis.length);
+// 	return emojis[randomNumber];
+// };
 
 export default function Main(props) {
 	const {
@@ -164,7 +164,8 @@ export default function Main(props) {
                                     ${idx + 1 === 3 && "u-text--orange"}`}
 										>
 											<div className="u-mt--8">
-												<strong>{row?.Score}</strong> {randomEmoji()}
+												<strong>{row?.Score}</strong>
+												{/* {randomEmoji()} */}
 											</div>
 										</div>
 									</div>
