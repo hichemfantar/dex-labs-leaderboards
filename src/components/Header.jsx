@@ -1,7 +1,7 @@
 import appConstants from "appConstants";
 import appLogo from "assets/images/logos/logo48round.png";
 import { FaGithub } from "react-icons/fa";
-import GlobalLoader from "./GlobalLoader/GlobalLoader";
+import Loader from "./loader/Loader";
 
 export default function Header() {
 	return (
@@ -17,7 +17,7 @@ export default function Header() {
 					alignItems: "center",
 				}}
 			>
-				<GlobalLoader />
+				<Loader />
 				<a
 					href="https://github.com/hichemfantar/dex-labs-leaderboards"
 					target={"_blank"}

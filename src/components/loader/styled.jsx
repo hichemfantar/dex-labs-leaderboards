@@ -1,8 +1,7 @@
-import React from "react";
 import { ImSpinner2 } from "react-icons/im";
 import smallGlobalLoaderStyles from "./SmallGlobalLoader.module.css";
 
-export function Loader(props) {
+export function Spinner(props) {
 	return (
 		<ImSpinner2
 			{...props}

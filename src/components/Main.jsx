@@ -1,6 +1,6 @@
-import servers from "./serversData.js";
-import infectedZones from "./InfectedZonesData.js";
-import useLeaderboard from "./useLeaderboard";
+import useLeaderboard from "../api/useLeaderboard";
+import infectedZones from "../data/InfectedZonesData.js";
+import servers from "../data/serversData.js";
 
 // const randomEmoji = () => {
 // 	const emojis = ["👏", "👍", "🙌", "🤩", "🔥", "⭐️", "🏆", "💯"];

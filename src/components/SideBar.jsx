@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useLeaderboard from "./useLeaderboard";
+import useLeaderboard from "../api/useLeaderboard";
 
 export default function SideBar(props) {
 	const { activeInfectedZone, ActiveServer, ...rest } = props;

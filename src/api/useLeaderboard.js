@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import convert from "xml-js";
-import servers from "./serversData.js";
+import servers from "../data/serversData.js";
 
 export default function useLeaderboard(infectedZoneID, ActiveServer) {
 	return useQuery(
