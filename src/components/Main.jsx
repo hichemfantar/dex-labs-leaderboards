@@ -104,6 +104,7 @@ export default function Main(props) {
 							<a
 								href="https://youtu.be/eWTtEkRz4fM"
 								target="_blank"
+								rel="noreferrer"
 								style={{
 									display: "block",
 									textAlign: "center",
@@ -118,6 +119,7 @@ export default function Main(props) {
 								<a
 									href="https://youtu.be/LNNPNweSbp8"
 									target="_blank"
+									rel="noreferrer"
 									style={{
 										display: "block",
 										textAlign: "center",
