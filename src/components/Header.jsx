@@ -21,15 +21,22 @@ export default function Header() {
 				<a
 					href="https://github.com/hichemfantar/dex-labs-leaderboards"
 					target={"_blank"}
+					rel="noreferrer"
 				>
 					<FaGithub size="2em" color="ddd9ff" />
 				</a>
-				<img
-					className="c-logo"
-					src={appLogo}
-					draggable="false"
-					alt="app logo"
-				/>
+				<a
+					href="https://github.com/OpenFusionProject/OpenFusion"
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<img
+						className="c-logo"
+						src={appLogo}
+						draggable="false"
+						alt="app logo"
+					/>
+				</a>
 			</div>
 		</div>
 	);
