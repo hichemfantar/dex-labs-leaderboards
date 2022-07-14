@@ -151,7 +151,7 @@ export default function Main(props) {
 
 						{serverQuery.data &&
 							serverQuery.data?.alltime?.score?.map((row, idx) => (
-								<li key={row?.PCUID} className="c-list__item">
+								<li key={JSON.stringify(row)} className="c-list__item">
 									<div className="c-list__grid">
 										<div
 											className={`c-flag c-place u-bg--transparent ${
