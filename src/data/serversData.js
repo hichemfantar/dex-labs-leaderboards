@@ -1,12 +1,12 @@
 const servers = [
 	{
 		name: "Original",
-		link: "/getranks",
+		url: "/getranks",
 		id: "1",
 	},
 	{
 		name: "Academy",
-		link: "/academy/getranks",
+		url: "/academy/getranks",
 		id: "2",
 	},
 ];

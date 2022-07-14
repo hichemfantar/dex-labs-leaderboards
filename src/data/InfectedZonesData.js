@@ -40,6 +40,7 @@ const locations = [
 		maxLevel: "4",
 		EP_ID: "1",
 		image: location1,
+		serverId: "1",
 	},
 	{
 		name: "Pokey Oaks Junior High (F)",
@@ -49,6 +50,7 @@ const locations = [
 		maxLevel: "4",
 		EP_ID: "2",
 		image: location2,
+		serverId: "1",
 	},
 	{
 		name: "Mandark's House (F)",
@@ -58,6 +60,7 @@ const locations = [
 		maxLevel: "4",
 		EP_ID: "3",
 		image: location3,
+		serverId: "1",
 	},
 	{
 		name: "Delightful Developments (F)",
@@ -67,6 +70,7 @@ const locations = [
 		maxLevel: "4",
 		EP_ID: "4",
 		image: location4,
+		serverId: "1",
 	},
 	{
 		name: "Megas' Last Stand (F)",
@@ -76,6 +80,7 @@ const locations = [
 		maxLevel: "4",
 		EP_ID: "5",
 		image: location5,
+		serverId: "1",
 	},
 	{
 		name: "Pokey Oaks Junior High",

@@ -1,23 +1,31 @@
+import { useEffect } from "react";
 import useLeaderboard from "../api/useLeaderboard";
 import infectedZones from "../data/InfectedZonesData.js";
 import servers from "../data/serversData.js";
-
-// const randomEmoji = () => {
-// 	const emojis = ["👏", "👍", "🙌", "🤩", "🔥", "⭐️", "🏆", "💯"];
-// 	let randomNumber = Math.floor(Math.random() * emojis.length);
-// 	return emojis[randomNumber];
-// };
 
 export default function Main(props) {
 	const {
 		activeInfectedZone,
 		setActiveInfectedZone,
-		ActiveServer,
+		activeServer,
 		setActiveServer,
 		...rest
 	} = props;
 
-	const serverQuery = useLeaderboard(activeInfectedZone?.EP_ID, ActiveServer);
+	const serverQuery = useLeaderboard(
+		activeInfectedZone?.EP_ID,
+		activeServer?.url
+	);
+
+	useEffect(() => {
+		const infectedZone = infectedZones.find((infectedZone) => {
+			return (
+				infectedZone.serverId === activeServer?.name || !infectedZone?.serverId
+			);
+		});
+
+		setActiveInfectedZone(infectedZone);
+	}, [activeServer?.name, setActiveInfectedZone, setActiveServer]);
 
 	return (
 		<div className="l-grid__item">
@@ -27,14 +35,18 @@ export default function Main(props) {
 					<select
 						className="c-select"
 						onChange={(e) => {
-							setActiveServer(e.target.value);
+							const server = servers.find((server) => {
+								return server.id === e.target.value;
+							});
+
+							setActiveServer(server);
 						}}
 					>
 						{servers.map((server) => (
 							<option
 								key={server?.id}
-								selected={ActiveServer?.id === server?.id}
-								value={server?.link}
+								selected={activeServer?.id === server?.id}
+								value={server?.id}
 							>
 								{server?.name}
 							</option>
@@ -55,15 +67,23 @@ export default function Main(props) {
 							setActiveInfectedZone(activeInfectedZone);
 						}}
 					>
-						{infectedZones.map((infectedZone) => (
-							<option
-								key={infectedZone?.EP_ID}
-								selected={activeInfectedZone?.EP_ID === infectedZone?.EP_ID}
-								value={infectedZone?.EP_ID}
-							>
-								{infectedZone?.name}
-							</option>
-						))}
+						{infectedZones.map((infectedZone) => {
+							if (
+								!infectedZone?.serverId ||
+								infectedZone?.serverId === activeServer?.name
+							) {
+								return (
+									<option
+										key={infectedZone?.EP_ID}
+										selected={activeInfectedZone?.EP_ID === infectedZone?.EP_ID}
+										value={infectedZone?.EP_ID}
+									>
+										{infectedZone?.name}
+									</option>
+								);
+							}
+							return <></>;
+						})}
 					</select>
 				</div>
 				<div className="c-card__header">
@@ -165,7 +185,6 @@ export default function Main(props) {
 										>
 											<div className="u-mt--8">
 												<strong>{row?.Score}</strong>
-												{/* {randomEmoji()} */}
 											</div>
 										</div>
 									</div>

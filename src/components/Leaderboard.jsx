@@ -9,20 +9,20 @@ export default function Leaderboard() {
 	const [activeInfectedZone, setActiveInfectedZone] = useState(
 		infectedZones[9]
 	);
-	const [ActiveServer, setActiveServer] = useState(servers[0]?.link);
+	const [activeServer, setActiveServer] = useState(servers[0]);
 
 	return (
 		<Layout>
 			<SideBar
 				activeInfectedZone={activeInfectedZone}
 				setActiveInfectedZone={setActiveInfectedZone}
-				ActiveServer={ActiveServer}
+				activeServer={activeServer}
 				setActiveServer={setActiveServer}
 			/>
 			<Main
 				activeInfectedZone={activeInfectedZone}
 				setActiveInfectedZone={setActiveInfectedZone}
-				ActiveServer={ActiveServer}
+				activeServer={activeServer}
 				setActiveServer={setActiveServer}
 			/>
 		</Layout>
