@@ -20,12 +20,12 @@ export default function Main(props) {
 	useEffect(() => {
 		const infectedZone = infectedZones.find((infectedZone) => {
 			return (
-				infectedZone.serverId === activeServer?.name || !infectedZone?.serverId
+				infectedZone.serverId === activeServer?.id || !infectedZone?.serverId
 			);
 		});
 
 		setActiveInfectedZone(infectedZone);
-	}, [activeServer?.name, setActiveInfectedZone, setActiveServer]);
+	}, [activeServer?.id, setActiveInfectedZone, setActiveServer]);
 
 	return (
 		<div className="l-grid__item">
@@ -70,7 +70,7 @@ export default function Main(props) {
 						{infectedZones.map((infectedZone) => {
 							if (
 								!infectedZone?.serverId ||
-								infectedZone?.serverId === activeServer?.name
+								infectedZone?.serverId === activeServer?.id
 							) {
 								return (
 									<option
