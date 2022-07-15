@@ -11,6 +11,7 @@ export default function useLeaderboards(infectedZoneID, activeServerUrl) {
 			let formdata = new FormData();
 			formdata.append("EP_ID", infectedZoneID);
 			formdata.append("PCUID", 0);
+			formdata.append("NUM", 50);
 
 			const res = await axios.post(activeServerUrl || servers[0], formdata);
 			try {

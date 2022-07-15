@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import App from "./App";
-import "./assets/css/index.css";
+// import "./assets/css/index.css";
+import "./assets/css/App.css";
 import reportWebVitals from "./reportWebVitals";
 
 const queryClient = new QueryClient({});
