@@ -1,24 +1,28 @@
 import { useEffect, useState } from "react";
-import useLeaderboard from "../api/useLeaderboard";
+import useLeaderboards from "../api/useLeaderboards";
 
 export default function SideBar(props) {
-	const { activeInfectedZone, activeServer, ...rest } = props;
-	const serverQuery = useLeaderboard(
+	const { activeInfectedZone, activeServer, activeTime, ...rest } = props;
+
+	const leaderboardsQuery = useLeaderboards(
 		activeInfectedZone?.EP_ID,
 		activeServer?.url
 	);
+
 	const [fullName, setFullName] = useState("");
 
 	useEffect(() => {
 		if (
-			serverQuery.data?.alltime?.score[0]?.FirstName &&
-			serverQuery.data?.alltime?.score[0]?.LastName
+			leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.FirstName &&
+			leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.LastName
 		) {
 			setFullName(
-				`${serverQuery.data?.alltime?.score[0]?.FirstName} ${serverQuery.data?.alltime?.score[0]?.LastName}`
+				`${leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.FirstName} ${
+					leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.LastName
+				}`
 			);
 		} else setFullName("👻");
-	}, [serverQuery.data?.alltime?.score]);
+	}, [activeTime?.key, leaderboardsQuery.data]);
 
 	return (
 		<div className="l-grid__item l-grid__item--sticky">
@@ -27,14 +31,15 @@ export default function SideBar(props) {
 					<div className="u-display--flex u-justify--space-between">
 						<div className="u-text--left">
 							<div className="u-text--small">Top Runner</div>
-							{serverQuery.isLoading && <h2>Checking if It's you...</h2>}
-							{serverQuery.isSuccess && <h2>{fullName}</h2>}
+							{leaderboardsQuery.isLoading && <h2>Checking if It's you...</h2>}
+							{leaderboardsQuery.isSuccess && <h2>{fullName}</h2>}
 						</div>
 						<div className="u-text--right">
 							<div className="u-text--small">Score</div>
 							<h2>
-								{serverQuery.isSuccess &&
-									(serverQuery.data?.alltime?.score[0]?.Score || "Over 9000!")}
+								{leaderboardsQuery.isSuccess &&
+									(leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.Score ||
+										"Over 9000!")}
 							</h2>
 						</div>
 					</div>
