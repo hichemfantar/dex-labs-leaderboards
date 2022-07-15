@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./assets/css/index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import App from "./App";
+import "./assets/css/index.css";
+import reportWebVitals from "./reportWebVitals";
 
 const queryClient = new QueryClient({});
 
@@ -12,6 +13,11 @@ root.render(
 	<React.StrictMode>
 		<QueryClientProvider client={queryClient}>
 			<App />
+			<ReactQueryDevtools
+				position={"top-left"}
+				closeButtonProps={{ style: { top: 0, bottom: "unset" } }}
+				initialIsOpen={false}
+			/>
 		</QueryClientProvider>
 	</React.StrictMode>
 );
