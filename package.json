@@ -1,8 +1,17 @@
 {
 	"name": "dex-labs-leaderboards",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"private": true,
 	"proxy": "http://api.dexlabs.systems",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hichemfantar/dex-labs-leaderboards.git"
+	},
+	"author": "Hichem Fantar <hichemfantar2049@gmail.com>",
+	"bugs": {
+		"url": "https://github.com/hichemfantar/dex-labs-leaderboards/issues"
+	},
+	"homepage": "https://github.com/hichemfantar/dex-labs-leaderboards#readme",
 	"engines": {
 		"node": "16.x"
 	},
