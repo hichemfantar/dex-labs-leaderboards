@@ -696,7 +696,7 @@ select {
 
 ::-webkit-scrollbar-track {
 	background: transparent;
-	background-color: #0a0f14;
+	/* background-color: #0a0f14; */
 }
 
 ::-webkit-scrollbar-thumb {
