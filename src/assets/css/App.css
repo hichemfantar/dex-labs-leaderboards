@@ -298,7 +298,7 @@ select {
 }
 
 .c-select {
-	background: transparent;
+	background: var(--darker);
 	padding: 1.2rem;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -307,9 +307,16 @@ select {
 	border-color: rgba(255, 255, 255, 0.2);
 	transition: all 120ms ease-out 0s;
 	border-radius: 5px;
+	border-width: 0px;
+	outline: 2px solid hsla(0, 0%, 100%, 0.12);
 }
 .c-select:hover {
 	background: var(--darkest);
+}
+
+.c-select:active,
+.c-select:focus {
+	outline: 2px solid hsla(0, 0%, 100%, 0.12);
 }
 
 .c-flag {
