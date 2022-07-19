@@ -20,6 +20,29 @@ export default function Main(props) {
 		activeServer?.url
 	);
 
+	function onServerChange(e) {
+		const server = servers.find((server) => {
+			return server.id === e.target.value;
+		});
+
+		setActiveServer(server);
+	}
+	function onInfectedZoneChange(e) {
+		const activeInfectedZone = infectedZones.find((selectedInfectedZone) => {
+			return selectedInfectedZone?.EP_ID === e.target.value;
+		});
+
+		setActiveInfectedZone(activeInfectedZone);
+	}
+
+	function onTimeChange(e) {
+		const selectedTime = timesData.find((time) => {
+			return time?.id === e.target.value;
+		});
+
+		setActiveTime(selectedTime);
+	}
+
 	useEffect(() => {
 		const infectedZone = infectedZones.find((infectedZone) => {
 			return (
@@ -35,16 +58,7 @@ export default function Main(props) {
 			<div className="c-card">
 				<div className="c-card__header">
 					<h3>Servers</h3>
-					<select
-						className="c-select"
-						onChange={(e) => {
-							const server = servers.find((server) => {
-								return server.id === e.target.value;
-							});
-
-							setActiveServer(server);
-						}}
-					>
+					<select className="c-select" onChange={onServerChange}>
 						{servers.map((server) => (
 							<option
 								key={server?.id}
@@ -58,18 +72,7 @@ export default function Main(props) {
 				</div>
 				<div className="c-card__header">
 					<h3>Infected Zones</h3>
-					<select
-						className="c-select"
-						onChange={(e) => {
-							const activeInfectedZone = infectedZones.find(
-								(selectedInfectedZone) => {
-									return selectedInfectedZone?.EP_ID === e.target.value;
-								}
-							);
-
-							setActiveInfectedZone(activeInfectedZone);
-						}}
-					>
+					<select className="c-select" onChange={onInfectedZoneChange}>
 						{infectedZones.map((infectedZone) => {
 							if (
 								!infectedZone?.serverId ||
@@ -92,16 +95,7 @@ export default function Main(props) {
 				<div className="c-card__header">
 					<h3>Time</h3>
 
-					<select
-						className="c-select"
-						onChange={(e) => {
-							const selectedTime = timesData.find((time) => {
-								return time?.id === e.target.value;
-							});
-
-							setActiveTime(selectedTime);
-						}}
-					>
+					<select className="c-select" onChange={onTimeChange}>
 						{timesData.map((time) => (
 							<option
 								key={time?.id}
