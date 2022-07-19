@@ -12,7 +12,7 @@
 		"url": "https://github.com/hichemfantar/dex-labs-leaderboards/issues"
 	},
 	"engines": {
-		"node": "16.x"
+		"node": ">=14.x"
 	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
