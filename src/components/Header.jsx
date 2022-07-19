@@ -18,11 +18,15 @@ export default function Header() {
 				}}
 			>
 				<Loader />
-				<a href={appConstants.gitHubLink} target={"_blank"} rel="noreferrer">
+				<a
+					href={appConstants.github.dexLabs.repository}
+					target={"_blank"}
+					rel="noreferrer"
+				>
 					<FaGithub size="2em" color="ddd9ff" />
 				</a>
 				<a
-					href={appConstants.openFusionGitHubLink}
+					href={appConstants.github.openFusion.repository}
 					target={"_blank"}
 					rel="noreferrer"
 				>
