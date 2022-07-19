@@ -1,0 +1,20 @@
+.loader {
+	animation: rotateLoader 1s infinite linear;
+	font-size: 2.5rem;
+	transition: 0.3s ease;
+	pointer-events: none;
+}
+
+.loader.paused {
+	animation-play-state: paused;
+	opacity: 0;
+}
+
+@keyframes rotateLoader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

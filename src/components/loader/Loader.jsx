@@ -5,12 +5,5 @@ export default function Loader() {
 	const isFetching = useIsFetching();
 	const isMutating = useIsMutating();
 
-	return (
-		<Spinner
-			className={!isFetching && !isMutating ? "paused" : ""}
-			// style={{
-			// 	opacity: isFetching || isMutating ? 1 : 0,
-			// }}
-		/>
-	);
+	return <Spinner className={!isFetching && !isMutating ? "paused" : ""} />;
 }
