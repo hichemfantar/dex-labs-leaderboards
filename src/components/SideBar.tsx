@@ -55,6 +55,7 @@ export default function SideBar(props: any) {
 							className="c-location-image"
 							src={activeInfectedZone?.image}
 							alt="active infected zone"
+							loading="lazy"
 						/>
 						<h3 className="u-mt--16">{activeInfectedZone?.name}</h3>
 						<span className="u-text--teal u-text--small">

@@ -35,6 +35,7 @@ export default function Header() {
 						src={appLogo}
 						draggable="false"
 						alt="app logo"
+						loading="lazy"
 					/>
 				</a>
 			</div>

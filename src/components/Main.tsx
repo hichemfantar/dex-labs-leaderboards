@@ -182,6 +182,7 @@ export default function Main(props: any) {
 													className="c-avatar c-media__img"
 													src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${row?.PCUID}`}
 													alt="user avatar"
+													loading="lazy"
 												/>
 												<div className="c-media__content">
 													<div className="c-media__title">
