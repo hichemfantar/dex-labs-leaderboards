@@ -20,7 +20,7 @@ px-2
 
 "
 		>
-			<div className="flex items-center gap-4">
+			<div className="flex items-center gap-3">
 				<a
 					href={appConstants.github.openFusion.repository}
 					target={"_blank"}
@@ -34,7 +34,7 @@ px-2
 					/>
 				</a>
 
-				<h2 className="">{appConstants.appName}</h2>
+				<h2 className="">{appConstants.appName} | OpenFusion</h2>
 			</div>
 			<div className="flex gap-4 items-center">
 				<Loader />
