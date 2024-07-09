@@ -181,7 +181,7 @@ export default function Main(props) {
 											<div className="c-media">
 												<img
 													className="c-avatar c-media__img"
-													src={`https://avatars.dicebear.com/api/adventurer/${row?.PCUID}.svg`}
+													src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${row?.PCUID}`}
 													alt="user avatar"
 												/>
 												<div className="c-media__content">
