@@ -32,7 +32,7 @@ export default function SideBar(props: any) {
 							
 							mb-[1.6rem]
 							
-							border-2 border-[#2d2d2d]
+							
 							"
 			>
 				<div className="p-4 md:p-8">
