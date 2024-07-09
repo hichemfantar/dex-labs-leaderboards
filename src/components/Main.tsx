@@ -68,7 +68,7 @@ border-2 border-[#2d2d2d]
 						<h3>Servers</h3>
 						<select
 							className="bg-[var(--darker)]
-p-4
+p-3
 
 rounded-lg
 border-2
@@ -96,7 +96,7 @@ text-sm
 						<h3>Infected Zones</h3>
 						<select
 							className="bg-[var(--darker)]
-p-4
+p-3
 
 rounded-lg
 border-2
@@ -135,7 +135,7 @@ text-sm
 
 						<select
 							className="bg-[var(--darker)]
-p-4
+p-3
 
 rounded-lg
 border-2

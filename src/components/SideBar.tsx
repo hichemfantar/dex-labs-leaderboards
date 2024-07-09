@@ -66,7 +66,7 @@ border-2 border-[#2d2d2d]
 			>
 				<div className="p-4 md:p-8">
 					<div className="text-center">
-						<div className="mb-6 text-2xl font-bold">Infected Zone</div>
+						<div className="mb-4 text-lg font-bold">Infected Zone</div>
 						<img
 							className="inline-flex
 items-center
@@ -78,7 +78,7 @@ object-cover"
 							alt="active infected zone"
 							loading="lazy"
 						/>
-						<h3 className="mt-6">{activeInfectedZone?.name}</h3>
+						<h3 className="mt-4">{activeInfectedZone?.name}</h3>
 						<div className="text-teal-400 mt-2">
 							{activeInfectedZone?.areaName}
 						</div>
