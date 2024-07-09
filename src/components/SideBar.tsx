@@ -35,7 +35,7 @@ export default function SideBar(props: any) {
 							border-2 border-[#2d2d2d]
 							"
 			>
-				<div className="p-8">
+				<div className="p-4 md:p-8">
 					<div className="u-display--flex u-justify--space-between">
 						<div className="">
 							<div className="">Top Runner</div>
@@ -64,7 +64,7 @@ mb-[1.6rem]
 border-2 border-[#2d2d2d]
 "
 			>
-				<div className="p-8">
+				<div className="p-4 md:p-8">
 					<div className="text-center">
 						<div className="mb-6 text-2xl font-bold">Infected Zone</div>
 						<img

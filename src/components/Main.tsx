@@ -59,7 +59,7 @@ export default function Main(props: any) {
 bg-[var(--surface)]
 
 mb-[1.6rem]
-p-8
+p-4 md:p-8
 border-2 border-[#2d2d2d]
 "
 			>
