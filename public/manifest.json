@@ -1,6 +1,7 @@
 {
 	"short_name": "DexLabs Leaderboards",
 	"name": "DexLabs Leaderboards",
+	"description": "DexLabs Leaderboards for FusionFall",
 	"icons": [
 		{
 			"src": "favicon.ico",
