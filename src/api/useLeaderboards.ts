@@ -19,13 +19,11 @@ export default function useLeaderboards(
 			formdata.append("NUM", "100");
 
 			const res = await axios.post(activeServerUrl || servers[0].url, formdata);
-			// console.log(res.data);
 
 			try {
 				const parsedData = convert.xml2js("<root>" + res.data + "</root>", {
 					compact: true,
 				}) as any;
-				console.log(parsedData);
 
 				delete parsedData.root._text;
 
