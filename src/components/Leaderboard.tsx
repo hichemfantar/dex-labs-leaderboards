@@ -1,10 +1,10 @@
-import timesData from "data/TimesData.js";
+import { timesData } from "../data/TimesData.js";
 import { useState } from "react";
-import infectedZones from "../data/InfectedZonesData.js";
-import servers from "../data/serversData.js";
-import Layout from "./Layout.jsx";
-import Main from "./Main";
-import SideBar from "./SideBar";
+import { locations as infectedZones } from "../data/InfectedZonesData.js";
+import { servers } from "../data/serversData.js";
+import Layout from "./Layout.js";
+import Main from "./Main.jsx";
+import SideBar from "./SideBar.jsx";
 
 export default function Leaderboard() {
 	const [activeInfectedZone, setActiveInfectedZone] = useState(

@@ -1,35 +1,35 @@
-import location1 from "assets/images/locations/ep_big_01.png";
-import location2 from "assets/images/locations/ep_big_02.png";
-import location3 from "assets/images/locations/ep_big_03.png";
-import location4 from "assets/images/locations/ep_big_04.png";
-import location5 from "assets/images/locations/ep_big_05.png";
-import location7 from "assets/images/locations/ep_big_07.png";
-import location8 from "assets/images/locations/ep_big_08.png";
-import location9 from "assets/images/locations/ep_big_09.png";
-import location10 from "assets/images/locations/ep_big_10.png";
-import location11 from "assets/images/locations/ep_big_11.png";
-import location12 from "assets/images/locations/ep_big_12.png";
-import location13 from "assets/images/locations/ep_big_13.png";
-import location14 from "assets/images/locations/ep_big_14.png";
-import location15 from "assets/images/locations/ep_big_15.png";
-import location16 from "assets/images/locations/ep_big_16.png";
-import location17 from "assets/images/locations/ep_big_17.png";
-import location18 from "assets/images/locations/ep_big_18.png";
-import location19 from "assets/images/locations/ep_big_19.png";
-import location20 from "assets/images/locations/ep_big_20.png";
-import location21 from "assets/images/locations/ep_big_21.png";
-import location22 from "assets/images/locations/ep_big_22.png";
-import location23 from "assets/images/locations/ep_big_23.png";
-import location24 from "assets/images/locations/ep_big_24.png";
-import location25 from "assets/images/locations/ep_big_25.png";
-import location26 from "assets/images/locations/ep_big_26.png";
-import location27 from "assets/images/locations/ep_big_27.png";
-import location28 from "assets/images/locations/ep_big_28.png";
-import location29 from "assets/images/locations/ep_big_29.png";
-import location30 from "assets/images/locations/ep_big_30.png";
-import location31 from "assets/images/locations/ep_big_31.png";
-import location32 from "assets/images/locations/ep_big_32.png";
-import location33 from "assets/images/locations/ep_big_33.png";
+import location1 from "../assets/images/locations/ep_big_01.png";
+import location2 from "../assets/images/locations/ep_big_02.png";
+import location3 from "../assets/images/locations/ep_big_03.png";
+import location4 from "../assets/images/locations/ep_big_04.png";
+import location5 from "../assets/images/locations/ep_big_05.png";
+import location7 from "../assets/images/locations/ep_big_07.png";
+import location8 from "../assets/images/locations/ep_big_08.png";
+import location9 from "../assets/images/locations/ep_big_09.png";
+import location10 from "../assets/images/locations/ep_big_10.png";
+import location11 from "../assets/images/locations/ep_big_11.png";
+import location12 from "../assets/images/locations/ep_big_12.png";
+import location13 from "../assets/images/locations/ep_big_13.png";
+import location14 from "../assets/images/locations/ep_big_14.png";
+import location15 from "../assets/images/locations/ep_big_15.png";
+import location16 from "../assets/images/locations/ep_big_16.png";
+import location17 from "../assets/images/locations/ep_big_17.png";
+import location18 from "../assets/images/locations/ep_big_18.png";
+import location19 from "../assets/images/locations/ep_big_19.png";
+import location20 from "../assets/images/locations/ep_big_20.png";
+import location21 from "../assets/images/locations/ep_big_21.png";
+import location22 from "../assets/images/locations/ep_big_22.png";
+import location23 from "../assets/images/locations/ep_big_23.png";
+import location24 from "../assets/images/locations/ep_big_24.png";
+import location25 from "../assets/images/locations/ep_big_25.png";
+import location26 from "../assets/images/locations/ep_big_26.png";
+import location27 from "../assets/images/locations/ep_big_27.png";
+import location28 from "../assets/images/locations/ep_big_28.png";
+import location29 from "../assets/images/locations/ep_big_29.png";
+import location30 from "../assets/images/locations/ep_big_30.png";
+import location31 from "../assets/images/locations/ep_big_31.png";
+import location32 from "../assets/images/locations/ep_big_32.png";
+import location33 from "../assets/images/locations/ep_big_33.png";
 
 const locations = [
 	{
@@ -327,4 +327,4 @@ const locations = [
 	},
 ];
 
-export default locations;
+export { locations };

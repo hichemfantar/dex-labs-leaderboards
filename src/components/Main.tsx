@@ -1,10 +1,10 @@
-import timesData from "data/TimesData";
 import { useEffect } from "react";
-import useLeaderboards from "../api/useLeaderboards";
-import infectedZones from "../data/InfectedZonesData.js";
-import servers from "../data/serversData.js";
+import useLeaderboards from "../api/useLeaderboards.js";
+import { servers } from "../data/serversData.js";
+import { timesData } from "../data/TimesData.js";
+import { locations as infectedZones } from "../data/InfectedZonesData.js";
 
-export default function Main(props) {
+export default function Main(props: any) {
 	const {
 		activeInfectedZone,
 		setActiveInfectedZone,
@@ -12,7 +12,6 @@ export default function Main(props) {
 		setActiveServer,
 		activeTime,
 		setActiveTime,
-		...rest
 	} = props;
 
 	const leaderboardsQuery = useLeaderboards(
@@ -20,14 +19,14 @@ export default function Main(props) {
 		activeServer?.url
 	);
 
-	function onServerChange(e) {
+	function onServerChange(e: any) {
 		const server = servers.find((server) => {
 			return server.id === e.target.value;
 		});
 
 		setActiveServer(server);
 	}
-	function onInfectedZoneChange(e) {
+	function onInfectedZoneChange(e: any) {
 		const activeInfectedZone = infectedZones.find((selectedInfectedZone) => {
 			return selectedInfectedZone?.EP_ID === e.target.value;
 		});
@@ -35,7 +34,7 @@ export default function Main(props) {
 		setActiveInfectedZone(activeInfectedZone);
 	}
 
-	function onTimeChange(e) {
+	function onTimeChange(e: any) {
 		const selectedTime = timesData.find((time) => {
 			return time?.id === e.target.value;
 		});
@@ -96,7 +95,7 @@ export default function Main(props) {
 					<h3>Time</h3>
 
 					<select className="c-select" onChange={onTimeChange}>
-						{timesData.map((time) => (
+						{timesData.map((time: any) => (
 							<option
 								key={time?.id}
 								selected={activeTime?.id === time?.id}
@@ -166,7 +165,7 @@ export default function Main(props) {
 
 						{leaderboardsQuery.data &&
 							leaderboardsQuery.data?.[activeTime?.key]?.score?.map(
-								(row, idx) => (
+								(row: any) => (
 									<li key={JSON.stringify(row)} className="c-list__item">
 										<div className="c-list__grid">
 											<div

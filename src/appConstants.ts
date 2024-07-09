@@ -1,4 +1,4 @@
-export const appConstants = {
+const appConstants = {
 	appName: "DexLabs Leaderboards",
 	baseUrl: "https://api.dexlabs.systems",
 	github: {
@@ -14,4 +14,4 @@ export const appConstants = {
 	},
 };
 
-export default appConstants;
+export { appConstants };

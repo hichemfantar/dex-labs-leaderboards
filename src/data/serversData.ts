@@ -11,4 +11,4 @@ const servers = [
 	},
 ];
 
-export default servers;
+export { servers };

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import useLeaderboards from "../api/useLeaderboards";
 
-export default function SideBar(props) {
-	const { activeInfectedZone, activeServer, activeTime, ...rest } = props;
+export default function SideBar(props: any) {
+	const { activeInfectedZone, activeServer, activeTime } = props;
 
 	const leaderboardsQuery = useLeaderboards(
 		activeInfectedZone?.EP_ID,

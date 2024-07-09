@@ -1,7 +1,7 @@
-import appConstants from "appConstants";
-import appLogo from "assets/images/logos/logo48round.png";
+import appLogo from "../assets/images/logos/logo48round.png";
 import { FaGithub } from "react-icons/fa";
 import Loader from "./loader/Loader";
+import { appConstants } from "../appConstants";
 
 export default function Header() {
 	return (

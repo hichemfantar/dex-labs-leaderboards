@@ -1,6 +1,6 @@
 import Header from "./Header";
 
-export default function Layout(props) {
+export default function Layout(props: any) {
 	const { children } = props;
 
 	return (

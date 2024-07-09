@@ -1,49 +1,58 @@
+// this file could be refactored to use immutability because right now it relies heavilty on mutating the original object which is unpredictable and can lead to bugs
+
 import axios from "axios";
-import timesData from "data/TimesData.js";
+import { timesData } from "../data/TimesData.js";
 import { useQuery } from "react-query";
 import convert from "xml-js";
-import servers from "../data/serversData.js";
+import { servers } from "../data/serversData.js";
 
-export default function useLeaderboards(infectedZoneID, activeServerUrl) {
+export default function useLeaderboards(
+	infectedZoneID: string,
+	activeServerUrl: string
+) {
 	return useQuery(
 		["leaderboard", infectedZoneID, activeServerUrl],
 		async () => {
-			let formdata = new FormData();
+			const formdata = new FormData();
 			formdata.append("EP_ID", infectedZoneID);
-			formdata.append("PCUID", 0);
-			formdata.append("NUM", 50);
+			formdata.append("PCUID", "0");
+			formdata.append("NUM", "100");
 
-			const res = await axios.post(activeServerUrl || servers[0], formdata);
+			const res = await axios.post(activeServerUrl || servers[0].url, formdata);
+			// console.log(res.data);
+
 			try {
-				const dataParsed = convert.xml2js("<root>" + res.data + "</root>", {
+				const parsedData = convert.xml2js("<root>" + res.data + "</root>", {
 					compact: true,
-					spaces: 4,
-				});
+				}) as any;
+				console.log(parsedData);
 
-				delete dataParsed.root._text;
+				delete parsedData.root._text;
 
-				let infectedZones = { ...dataParsed?.root };
+				const infectedZones = { ...parsedData?.root };
 
 				timesData.forEach((time) => {
-					if (!dataParsed?.root || !dataParsed?.root?.[time?.key]) {
+					if (!parsedData?.root || !parsedData?.root?.[time?.key]) {
 						return;
 					}
 
-					if (!dataParsed?.root?.[time?.key]?.score) {
-						dataParsed.root[time?.key].score = [
+					if (!parsedData?.root?.[time?.key]?.score) {
+						parsedData.root[time?.key].score = [
 							// { _text: dataParsed?.root?.[time?.key]?.score?._text },
 						];
 					}
 
-					if (dataParsed?.root?.[time?.key]?.score?._text) {
-						dataParsed.root[time?.key].score = [
-							{ _text: dataParsed?.root?.[time?.key]?.score?._text },
+					if (parsedData?.root?.[time?.key]?.score?._text) {
+						parsedData.root[time?.key].score = [
+							{ _text: parsedData?.root?.[time?.key]?.score?._text },
 						];
 					}
 
-					const parsed = dataParsed?.root?.[time?.key]?.score?.map(
-						(element) => {
+					const parsed = parsedData?.root?.[time?.key]?.score?.map(
+						(element: { _text: string }) => {
 							const array = element._text.match(/"(.*?)"/g);
+							if (!array) return;
+
 							const newArray = array.map((element) => {
 								return element.replaceAll('"', "");
 							});
@@ -62,7 +71,7 @@ export default function useLeaderboards(infectedZoneID, activeServerUrl) {
 				// newRoot.alltime.score = [...(parsed || [])];
 				return infectedZones;
 			} catch (error) {
-				console.log(error);
+				console.error(error);
 				return [];
 			}
 			return res.data;
