@@ -53,62 +53,116 @@ export default function Main(props: any) {
 	}, [activeServer?.id, setActiveInfectedZone, setActiveServer]);
 
 	return (
-		<div className="l-grid__item">
-			<div className="c-card">
-				<div className="c-card__header">
-					<h3>Servers</h3>
-					<select className="c-select" onChange={onServerChange}>
-						{servers.map((server) => (
-							<option
-								key={server?.id}
-								selected={activeServer?.id === server?.id}
-								value={server?.id}
-							>
-								{server?.name}
-							</option>
-						))}
-					</select>
-				</div>
-				<div className="c-card__header">
-					<h3>Infected Zones</h3>
-					<select className="c-select" onChange={onInfectedZoneChange}>
-						{infectedZones.map((infectedZone) => {
-							if (
-								!infectedZone?.serverId ||
-								infectedZone?.serverId === activeServer?.id
-							) {
-								return (
-									<option
-										key={infectedZone?.EP_ID}
-										selected={activeInfectedZone?.EP_ID === infectedZone?.EP_ID}
-										value={infectedZone?.EP_ID}
-									>
-										{infectedZone?.name}
-									</option>
-								);
-							}
-							return <></>;
-						})}
-					</select>
-				</div>
-				<div className="c-card__header">
-					<h3>Time</h3>
+		<div className="md:col-span-8">
+			<div
+				className="rounded-[0.8rem]
+bg-[var(--surface)]
 
-					<select className="c-select" onChange={onTimeChange}>
-						{timesData.map((time: any) => (
-							<option
-								key={time?.id}
-								selected={activeTime?.id === time?.id}
-								value={time?.id}
-							>
-								{time?.name}
-							</option>
-						))}
-					</select>
+mb-[1.6rem]
+p-8
+border-2 border-[#2d2d2d]
+"
+			>
+				<div className="flex flex-col gap-6">
+					<div className="flex flex-col md:flex-row justify-between gap-2 md:items-center">
+						<h3>Servers</h3>
+						<select
+							className="bg-[var(--darker)]
+p-4
+
+rounded-lg
+border-2
+border-[#323336]
+border-solid
+transition
+bg-[#16171a]
+min-w-32
+text-sm
+"
+							onChange={onServerChange}
+						>
+							{servers.map((server) => (
+								<option
+									key={server?.id}
+									selected={activeServer?.id === server?.id}
+									value={server?.id}
+								>
+									{server?.name}
+								</option>
+							))}
+						</select>
+					</div>
+					<div className="flex flex-col md:flex-row justify-between gap-2 md:items-center">
+						<h3>Infected Zones</h3>
+						<select
+							className="bg-[var(--darker)]
+p-4
+
+rounded-lg
+border-2
+border-[#323336]
+border-solid
+transition
+bg-[#16171a]
+min-w-32
+text-sm
+"
+							onChange={onInfectedZoneChange}
+						>
+							{infectedZones.map((infectedZone) => {
+								if (
+									!infectedZone?.serverId ||
+									infectedZone?.serverId === activeServer?.id
+								) {
+									return (
+										<option
+											key={infectedZone?.EP_ID}
+											selected={
+												activeInfectedZone?.EP_ID === infectedZone?.EP_ID
+											}
+											value={infectedZone?.EP_ID}
+										>
+											{infectedZone?.name}
+										</option>
+									);
+								}
+								return <></>;
+							})}
+						</select>
+					</div>
+					<div className="flex flex-col md:flex-row justify-between gap-2 md:items-center">
+						<h3>Time</h3>
+
+						<select
+							className="bg-[var(--darker)]
+p-4
+
+rounded-lg
+border-2
+border-[#323336]
+border-solid
+transition
+bg-[#16171a]
+min-w-32
+text-sm
+"
+							onChange={onTimeChange}
+						>
+							{timesData.map((time: any) => (
+								<option
+									key={time?.id}
+									selected={activeTime?.id === time?.id}
+									value={time?.id}
+								>
+									{time?.name}
+								</option>
+							))}
+						</select>
+					</div>
 				</div>
-				<div className="c-card__body">
+				<div className="">
 					<ul className="c-list" id="list">
-						<li className="c-list__item">
+						<li className="py-4">
 							<div className="c-list__grid">
 								<div className="u-text--left u-text--small u-text--medium">
 									Rank
@@ -159,28 +213,28 @@ export default function Main(props: any) {
 										textAlign: "center",
 									}}
 								>
-									<h1>It's a ghost town!</h1>
+									<h1 className="text-xl">It's a ghost town!</h1>
 								</a>
 							)}
 
 						{leaderboardsQuery.data &&
 							leaderboardsQuery.data?.[activeTime?.key]?.score?.map(
 								(row: any) => (
-									<li key={JSON.stringify(row)} className="c-list__item">
-										<div className="c-list__grid">
+									<li key={JSON.stringify(row)} className="py-4">
+										<div className="c-list__grid items-center">
 											<div
-												className={`c-flag c-place u-bg--transparent ${
-													row?.Rank == 1 && "u-text--dark u-bg--yellow"
+												className={`flex justify-center items-center h-10 rounded-lg aspect-square font-semibold ${
+													row?.Rank == 1 && "text-black bg-yellow-300"
 												}
-                      ${row?.Rank == 2 && "u-text--dark u-bg--teal"}
-                      ${row?.Rank == 3 && "u-text--dark u-bg--orange"}`}
+                      ${row?.Rank == 2 && "text-black bg-slate-300"}
+                      ${row?.Rank == 3 && "text-black bg-orange-300"}`}
 											>
 												{row?.Rank}
 											</div>
 											<div className="c-media">
 												<img
-													className="c-avatar c-media__img"
-													src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${row?.PCUID}`}
+													className="border-2 inline-flex justify-center items-center border-[#a3afbf] bg-white rounded-xl h-12 aspect-square object-contain"
+													src={`https://api.dicebear.com/9.x/adventurer/png?seed=${row?.PCUID}`}
 													alt="user avatar"
 													loading="lazy"
 												/>
@@ -199,7 +253,7 @@ export default function Main(props: any) {
 												} ${row?.Rank == 2 && "u-text--teal"}
                                     ${row?.Rank == 3 && "u-text--orange"}`}
 											>
-												<div className="u-mt--8">
+												<div className="">
 													<strong>{row?.Score}</strong>
 												</div>
 											</div>

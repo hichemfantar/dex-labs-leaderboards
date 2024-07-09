@@ -4,9 +4,11 @@ export default function Layout(props: any) {
 	const { children } = props;
 
 	return (
-		<div className="l-wrapper">
+		<div className="container mx-auto">
 			<Header />
-			<div className="l-grid">{children}</div>
+			<div className="grid md:grid-cols-12 gap-y-6 md:gap-x-6 px-2">
+				{children}
+			</div>
 		</div>
 	);
 }

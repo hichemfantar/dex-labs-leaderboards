@@ -1,6 +1,6 @@
 .loader {
 	animation: rotateLoader 1s infinite linear;
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	transition: 0.3s ease;
 	pointer-events: none;
 }

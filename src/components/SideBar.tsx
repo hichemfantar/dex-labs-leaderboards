@@ -25,18 +25,28 @@ export default function SideBar(props: any) {
 	}, [activeTime?.key, leaderboardsQuery.data]);
 
 	return (
-		<div className="l-grid__item l-grid__item--sticky">
-			<div className="c-card u-bg--light-gradient u-text--dark">
-				<div className="c-card__body">
+		<div className="md:col-span-4">
+			<div
+				className="rounded-[0.8rem]
+				u-bg--light-gradient u-text--dark			
+							
+							mb-[1.6rem]
+							
+							border-2 border-[#2d2d2d]
+							"
+			>
+				<div className="p-8">
 					<div className="u-display--flex u-justify--space-between">
-						<div className="u-text--left">
-							<div className="u-text--small">Top Runner</div>
+						<div className="">
+							<div className="">Top Runner</div>
 							{leaderboardsQuery.isLoading && <h2>Checking if It's you...</h2>}
-							{leaderboardsQuery.isSuccess && <h2>{fullName}</h2>}
+							{leaderboardsQuery.isSuccess && (
+								<h2 className="text-2xl">{fullName}</h2>
+							)}
 						</div>
-						<div className="u-text--right">
+						<div className="text-right">
 							<div className="u-text--small">Score</div>
-							<h2>
+							<h2 className="text-2xl">
 								{leaderboardsQuery.isSuccess &&
 									(leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.Score ||
 										"Over 9000!")}
@@ -45,30 +55,39 @@ export default function SideBar(props: any) {
 					</div>
 				</div>
 			</div>
-			<div className="c-card">
-				<div className="c-card__body">
-					<div className="u-text--center" id="winner">
-						<div className="u-text-small u-text--medium u-mb--16">
-							Infected Zone
-						</div>
+			<div
+				className="rounded-[0.8rem]
+bg-[var(--surface)]
+
+mb-[1.6rem]
+
+border-2 border-[#2d2d2d]
+"
+			>
+				<div className="p-8">
+					<div className="text-center">
+						<div className="mb-6 text-2xl font-bold">Infected Zone</div>
 						<img
-							className="c-location-image"
+							className="inline-flex
+items-center
+justify-center
+rounded-lg
+w-full
+object-cover"
 							src={activeInfectedZone?.image}
 							alt="active infected zone"
 							loading="lazy"
 						/>
-						<h3 className="u-mt--16">{activeInfectedZone?.name}</h3>
-						<span className="u-text--teal u-text--small">
+						<h3 className="mt-6">{activeInfectedZone?.name}</h3>
+						<div className="text-teal-400 mt-2">
 							{activeInfectedZone?.areaName}
-						</span>
-						<h4 className="u-text--teal u-text--small">
-							{activeInfectedZone?.time}
-						</h4>
-						<h4 className="u-text--teal u-text--small">
+						</div>
+						<h4 className="text-teal-400 mt-2">{activeInfectedZone?.time}</h4>
+						<h4 className="text-teal-400 mt-2">
 							Level: {activeInfectedZone?.minLevel} -{" "}
 							{activeInfectedZone?.maxLevel}
 						</h4>
-						{/* <h4 className="u-text--teal u-text--small">
+						{/* <h4 className="text-teal-400 u-text--small">
 							API ID: {activeInfectedZone?.EP_ID}
 						</h4> */}
 					</div>

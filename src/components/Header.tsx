@@ -5,39 +5,62 @@ import { appConstants } from "../appConstants";
 
 export default function Header() {
 	return (
-		<div className="c-header">
-			<button className="c-button c-button--primary">
-				{appConstants.appName}
-			</button>
-			<div
-				style={{
-					display: "flex",
-					gap: 10,
-					justifyContent: "center",
-					alignItems: "center",
-				}}
-			>
-				<Loader />
-				<a
-					href={appConstants.github.dexLabs.repository}
-					target={"_blank"}
-					rel="noreferrer"
-				>
-					<FaGithub size="2em" color="ddd9ff" />
-				</a>
+		<div
+			className="
+py-6
+flex
+justify-between
+items-center
+
+relative
+
+ 
+
+px-2
+
+"
+		>
+			<div className="flex items-center gap-4">
 				<a
 					href={appConstants.github.openFusion.repository}
 					target={"_blank"}
 					rel="noreferrer"
 				>
 					<img
-						className="c-logo"
+						className="h-8 aspect-square object-cover rounded-lg"
+						src={appLogo}
+						alt="app logo"
+						loading="lazy"
+					/>
+				</a>
+
+				<h2 className="">{appConstants.appName}</h2>
+			</div>
+			<div className="flex gap-4 items-center">
+				<Loader />
+				<a
+					href={appConstants.github.dexLabs.repository}
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<FaGithub
+						size={"1.8em"}
+						className="aspect-square object-contain text-white"
+					/>
+				</a>
+				{/* <a
+					href={appConstants.github.openFusion.repository}
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<img
+						className="h-10 aspect-square object-cover rounded-xl"
 						src={appLogo}
 						draggable="false"
 						alt="app logo"
 						loading="lazy"
 					/>
-				</a>
+				</a> */}
 			</div>
 		</div>
 	);
