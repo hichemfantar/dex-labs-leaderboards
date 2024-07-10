@@ -239,7 +239,7 @@ text-sm
 													loading="lazy"
 												/>
 												<div className="c-media__content">
-													<div className="c-media__title">
+													<div className="">
 														{row?.FirstName} {row?.LastName}
 													</div>
 													{/* <a className="c-media__link u-text--small" href="#">
