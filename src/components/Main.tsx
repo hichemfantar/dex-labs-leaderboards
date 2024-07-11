@@ -234,7 +234,7 @@ text-sm
 											<div className="c-media">
 												<img
 													className="border-2 inline-flex justify-center items-center border-[#a3afbf] bg-white rounded-xl h-12 aspect-square object-contain"
-													src={`https://api.dicebear.com/9.x/adventurer/png?seed=${row?.PCUID}`}
+													src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${row?.PCUID}`}
 													alt="user avatar"
 													loading="lazy"
 												/>
