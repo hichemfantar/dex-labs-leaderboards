@@ -252,12 +252,12 @@ text-sm
 												</a> */}
 													</div>
 												</td>
-												<td className="py-4">
+												<td className="py-4 text-right">
 													<div
-														className={`u-text--right c-kudos ${
-															row?.Rank == 1 && "u-text--yellow"
-														} ${row?.Rank == 2 && "u-text--teal"}
-                                    ${row?.Rank == 3 && "u-text--orange"}`}
+														className={` ${
+															row?.Rank == 1 && "text-yellow-300"
+														} ${row?.Rank == 2 && "text-teal-300"}
+                                    ${row?.Rank == 3 && "text-orange-300"}`}
 													>
 														<div className="">
 															<strong>{row?.Score}</strong>
