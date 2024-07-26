@@ -160,6 +160,117 @@ text-sm
 						</select>
 					</div>
 				</div>
+				<div className="mt-4">
+					<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+						<table className="w-full text-sm text-left rtl:text-right">
+							<thead className="text-xs uppercase">
+								<tr className="">
+									<th scope="col" className="py-3">
+										Rank
+									</th>
+									<th scope="col" className="py-3 px-4">
+										Player
+									</th>
+									<th scope="col" className="py-3 text-right">
+										Score
+									</th>
+								</tr>
+							</thead>
+							{leaderboardsQuery.isLoading && (
+								<div
+									className="link"
+									style={{
+										display: "block",
+										textAlign: "center",
+									}}
+								>
+									<h1>Loading...</h1>
+								</div>
+							)}
+
+							{leaderboardsQuery.isError && (
+								<a
+									href="https://youtu.be/eWTtEkRz4fM"
+									target="_blank"
+									rel="noreferrer"
+									style={{
+										display: "block",
+										textAlign: "center",
+									}}
+								>
+									<h1>Something went wrong!</h1>
+								</a>
+							)}
+
+							{leaderboardsQuery.isSuccess &&
+								!leaderboardsQuery.data?.[activeTime?.key]?.score?.length && (
+									<a
+										href="https://youtu.be/LNNPNweSbp8"
+										target="_blank"
+										rel="noreferrer"
+										style={{
+											display: "block",
+											textAlign: "center",
+										}}
+									>
+										<h1 className="text-xl">It's a ghost town!</h1>
+									</a>
+								)}
+
+							<tbody>
+								{leaderboardsQuery.data &&
+									leaderboardsQuery.data?.[activeTime?.key]?.score?.map(
+										(row: any) => (
+											<tr className="">
+												<th
+													scope="row"
+													className="py-4 font-medium whitespace-nowrap"
+												>
+													<div
+														className={`flex justify-center items-center h-10 rounded-lg aspect-square font-semibold ${
+															row?.Rank == 1 && "text-black bg-yellow-300"
+														}
+                      ${row?.Rank == 2 && "text-black bg-slate-300"}
+                      ${row?.Rank == 3 && "text-black bg-orange-300"}`}
+													>
+														{row?.Rank}
+													</div>
+												</th>
+												<td className="py-4 flex items-center gap-4 px-4">
+													<img
+														className="border-2 inline-flex justify-center items-center border-[#a3afbf] bg-white rounded-xl h-12 aspect-square object-contain"
+														src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${row?.PCUID}`}
+														alt="user avatar"
+														loading="lazy"
+													/>
+													<div className="">
+														<div className="">
+															{row?.FirstName} {row?.LastName}
+														</div>
+														{/* <a className="c-media__link u-text--small" href="#">
+													{row?.PCUID}
+												</a> */}
+													</div>
+												</td>
+												<td className="py-4">
+													<div
+														className={`u-text--right c-kudos ${
+															row?.Rank == 1 && "u-text--yellow"
+														} ${row?.Rank == 2 && "u-text--teal"}
+                                    ${row?.Rank == 3 && "u-text--orange"}`}
+													>
+														<div className="">
+															<strong>{row?.Score}</strong>
+														</div>
+													</div>
+												</td>
+											</tr>
+										)
+									)}
+							</tbody>
+						</table>
+					</div>
+				</div>
 				<div className="">
 					<ul className="c-list" id="list">
 						<li className="py-4">

@@ -28,7 +28,7 @@ export default function SideBar(props: any) {
 		<div className="md:col-span-4">
 			<div
 				className="rounded-[0.8rem]
-				u-bg--light-gradient u-text--dark			
+				u-bg--light-gradient text-black			
 							
 							mb-[1.6rem]
 							
@@ -36,7 +36,7 @@ export default function SideBar(props: any) {
 							"
 			>
 				<div className="p-4 md:p-8">
-					<div className="u-display--flex u-justify--space-between">
+					<div className="flex justify-between">
 						<div className="">
 							<div className="">Top Runner</div>
 							{leaderboardsQuery.isLoading && <h2>Checking if It's you...</h2>}
@@ -45,7 +45,7 @@ export default function SideBar(props: any) {
 							)}
 						</div>
 						<div className="text-right">
-							<div className="u-text--small">Score</div>
+							<div className="">Score</div>
 							<h2 className="text-2xl">
 								{leaderboardsQuery.isSuccess &&
 									(leaderboardsQuery.data?.[activeTime?.key]?.score[0]?.Score ||
