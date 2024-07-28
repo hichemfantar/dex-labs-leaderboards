@@ -64,8 +64,9 @@ border-2 border-[#2d2d2d]
 			>
 				<div className="flex flex-col gap-6">
 					<div className="flex flex-col md:flex-row justify-between gap-2 md:items-center">
-						<h3>Servers</h3>
+						<label htmlFor="servers">Servers</label>
 						<select
+							id="servers"
 							className="bg-[var(--darker)]
 p-3
 
@@ -92,8 +93,10 @@ text-sm
 						</select>
 					</div>
 					<div className="flex flex-col md:flex-row justify-between gap-2 md:items-center">
-						<h3>Infected Zones</h3>
+						<label htmlFor="Infected Zones">Infected Zones</label>
+
 						<select
+							id="Infected Zones"
 							className="bg-[var(--darker)]
 p-3
 
@@ -130,9 +133,10 @@ text-sm
 						</select>
 					</div>
 					<div className="flex flex-col md:flex-row justify-between gap-2 md:items-center">
-						<h3>Time</h3>
+						<label htmlFor="time">Time</label>
 
 						<select
+							id="time"
 							className="bg-[var(--darker)]
 p-3
 

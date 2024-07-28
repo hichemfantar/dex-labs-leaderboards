@@ -42,6 +42,7 @@ px-2
 					href={appConstants.github.dexLabs.repository}
 					target={"_blank"}
 					rel="noreferrer"
+					aria-label="GitHub Repository"
 				>
 					<FaGithub
 						size={"1.8em"}
