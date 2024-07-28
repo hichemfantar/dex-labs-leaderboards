@@ -59,8 +59,6 @@ export default function SideBar(props: any) {
 				className="rounded-[0.8rem]
 bg-[var(--surface)]
 
-mb-[1.6rem]
-
 border-2 border-[#2d2d2d]
 "
 			>
