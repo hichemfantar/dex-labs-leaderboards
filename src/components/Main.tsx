@@ -164,7 +164,7 @@ text-sm
 					</div>
 				</div>
 				<div className="mt-4">
-					<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+					<div className="relative overflow-x-auto">
 						<table className="w-full text-sm text-left rtl:text-right">
 							<thead className="text-xs uppercase">
 								<tr className="">
