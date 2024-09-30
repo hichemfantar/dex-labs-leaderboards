@@ -241,7 +241,7 @@ text-sm
 												</th>
 												<td className="py-4 flex items-center gap-4 px-4">
 													<img
-														className="border-2 inline-flex justify-center items-center border-[#a3afbf] bg-white rounded-xl h-12 aspect-square object-contain"
+														className="border-2 inline-flex justify-center items-center border-[#a3afbf] bg-white rounded-full h-12 aspect-square object-contain"
 														src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${row?.PCUID}`}
 														alt="user avatar"
 														loading="lazy"
