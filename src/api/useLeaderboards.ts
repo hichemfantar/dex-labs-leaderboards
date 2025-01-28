@@ -13,12 +13,17 @@ export default function useLeaderboards(
 	return useQuery(
 		["leaderboard", infectedZoneID, activeServerUrl],
 		async () => {
-			const formdata = new FormData();
-			formdata.append("EP_ID", infectedZoneID);
-			formdata.append("PCUID", "0");
-			formdata.append("NUM", "100");
+			const payload = {
+				EP_ID: infectedZoneID,
+				PCUID: "0",
+				NUM: "100",
+			}
 
-			const res = await axios.post(activeServerUrl || servers[0].url, formdata);
+			const res = await axios.post(activeServerUrl || servers[0].url, payload,{
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded",
+				},
+			});
 
 			try {
 				const parsedData = convert.xml2js("<root>" + res.data + "</root>", {
