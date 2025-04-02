@@ -4,8 +4,8 @@ import Leaderboard from "./components/Leaderboard";
 
 // this is to avoid cors issues in dev
 // proxy set in vite config
-axios.defaults.baseURL = "/api";
 
+axios.defaults.baseURL = "/api";
 if (import.meta.env.PROD) {
 	axios.defaults.baseURL = appConstants.baseUrl;
 }
